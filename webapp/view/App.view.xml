@@ -1,4 +1,49 @@
-<mvc:View controllerName="yo.test.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-    <App id="app">
-    </App>
+<mvc:View 
+    controllerName="yo.test.controller.App" 
+    xmlns:html="http://www.w3.org/1999/xhtml" 
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt">
+    <tnt:ToolPage
+        id="app"
+        class="sapUiDemoToolPage">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Title
+                    text="{i18n>appTitle}"
+                    level="H2"/>
+                <ToolbarSpacer/>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation
+                expanded="true"
+                selectedKey="{appMenu>/selectedKey}">
+                <tnt:NavigationList
+                    items="{
+                        path: 'appMenu>/items',
+                        templateShareable: false
+                    }">
+                    <tnt:NavigationListItem
+                        text="{path: 'appMenu>titleI18nKey', formatter: '.getItemText'}"
+                        icon="{appMenu>icon}"
+                        items="{
+                            path: 'appMenu>items',
+                            templateShareable: false
+                        }"
+                        key="{appMenu>key}"
+                        href="#/{appMenu>key}">
+                        <tnt:NavigationListItem
+                            text="{path: 'appMenu>titleI18nKey', formatter: '.getItemText'}"
+                            key="{appMenu>key}"
+                            href="#/{appMenu>key}">
+                        </tnt:NavigationListItem>
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <App id="main"/>
+        </tnt:mainContents>
+    </tnt:ToolPage>
 </mvc:View>

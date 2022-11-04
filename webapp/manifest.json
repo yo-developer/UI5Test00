@@ -37,7 +37,8 @@
       "minUI5Version": "1.102.0",
       "libs": {
         "sap.m": {},
-        "sap.ui.core": {}
+        "sap.ui.core": {},
+        "sap.tnt": {}
       }
     },
     "contentDensities": {
@@ -50,7 +51,11 @@
         "settings": {
           "bundleName": "yo.test.i18n.i18n"
         }
-      }
+      },
+      "appMenu": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/app_menu.json"
+      } 
     },
     "resources": {
       "css": [
@@ -66,23 +71,29 @@
         "async": true,
         "viewPath": "yo.test.view",
         "controlAggregation": "pages",
-        "controlId": "app",
+        "controlId": "main",
         "clearControlAggregation": false
       },
       "routes": [
         {
           "name": "RouteMain",
           "pattern": "",
-          "target": [
-            "TargetMain"
-          ]
+          "target": "TargetMain"
+        },
+        {
+          "name": "RouteItem1",
+          "pattern": "item1",
+          "target": "TargetItem1"
         }
       ],
       "targets": {
         "TargetMain": {
           "viewType": "XML",
-          "transition": "slide",
-          "clearControlAggregation": false,
+          "viewId": "Main",
+          "viewName": "Main"
+        },
+        "TargetItem1": {
+          "viewType": "XML",
           "viewId": "Main",
           "viewName": "Main"
         }

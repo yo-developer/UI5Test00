@@ -31,15 +31,6 @@ sap.ui.define(
             },
 
             /**
-             * Convenience method for getting the resource bundle.
-             * @public
-             * @returns {sap.ui.model.resource.ResourceModel} the resourceModel of the component
-             */
-            getResourceBundle: function () {
-                return this.getOwnerComponent().getModel("i18n").getResourceBundle();
-            },
-
-            /**
              * Method for navigation to specific view
              * @public
              * @param {string} psTarget Parameter containing the string for the target navigation
