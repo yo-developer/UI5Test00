@@ -76,9 +76,9 @@
       },
       "routes": [
         {
-          "name": "RouteMain",
+          "name": "RouteHome",
           "pattern": "",
-          "target": "TargetMain"
+          "target": "TargetHome"
         },
         {
           "name": "RouteItem1",
@@ -87,15 +87,15 @@
         }
       ],
       "targets": {
-        "TargetMain": {
+        "TargetHome": {
           "viewType": "XML",
-          "viewId": "Main",
-          "viewName": "Main"
+          "viewId": "Home",
+          "viewName": "Home"
         },
         "TargetItem1": {
           "viewType": "XML",
-          "viewId": "Main",
-          "viewName": "Main"
+          "viewId": "Home",
+          "viewName": "HOme"
         }
       }
     },
