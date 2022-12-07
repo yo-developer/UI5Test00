@@ -13,6 +13,17 @@
     "sourceTemplate": {
       "id": "@sap-ux/fiori-freestyle-writer:basic",
       "version": "0.12.8"
+    },
+    "dataSources": {
+      "entityService": {
+        "uri": "/v2/service/entity/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -55,7 +66,18 @@
       "appMenu": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/app_menu.json"
-      } 
+      },
+      "entity": {
+        "type" : "sap.ui.model.odata.v2.ODataModel",
+        "dataSource": "entityService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      }
     },
     "resources": {
       "css": [
@@ -76,14 +98,24 @@
       },
       "routes": [
         {
-          "name": "RouteHome",
+          "name": "Home",
           "pattern": "",
           "target": "TargetHome"
         },
         {
-          "name": "RouteItem1",
-          "pattern": "item1",
-          "target": "TargetItem1"
+          "name": "Home2",
+          "pattern": "home",
+          "target": "TargetHome"
+        },
+        {
+          "name": "Entity1List",
+          "pattern": "entity1",
+          "target": "TargetEntity1List"
+        },
+        {
+          "name": "Entity1Detail",
+          "pattern": "entity1/{ID}",
+          "target": "TargetEntity1Detail"
         }
       ],
       "targets": {
@@ -92,10 +124,15 @@
           "viewId": "Home",
           "viewName": "Home"
         },
-        "TargetItem1": {
+        "TargetEntity1List": {
           "viewType": "XML",
-          "viewId": "Home",
-          "viewName": "HOme"
+          "viewId": "Entity1ListB",
+          "viewName": "entity1.Entity1ListB"
+        },
+        "TargetEntity1Detail": {
+          "viewType": "XML",
+          "viewId": "Entity1Detail",
+          "viewName": "entity1.Entity1DetailB"
         }
       }
     },

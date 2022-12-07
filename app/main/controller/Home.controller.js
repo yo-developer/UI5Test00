@@ -6,7 +6,7 @@ sap.ui.define(
     function (Controller) {
         "use strict";
 
-        return Controller.extend("yo.test.controller.MainView", {
+        return Controller.extend("yo.test.controller.Home", {
             onInit: function () {},
         });
     }

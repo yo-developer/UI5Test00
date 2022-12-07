@@ -1,0 +1,32 @@
+sap.uxap.ObjetPageLayout
+    x.x.ObjectPageDynapicHeaderTitle
+        sap.m.title
+    sap.m.OverFlowToolbar
+        sap.m.button
+    sap.uxap.ObjectPageDyamicHeaderContent
+        sap.m.FlexBox
+            sap.ui.layout.VerticalLayout
+                sap.m.Label
+                sap.m.SearchField
+            sap.m.button
+            sap.m.ToggleButtom
+    sap.uxap.ObjectPageSection
+        sap.uxap.ObjectPageSubSection
+            sap.ui.layout.Grid
+                cockpit.common.fclTable.fclTable
+                    sap.m.OverFlowToolbar
+                        sap.m.ToolbarSpacer
+                        sap.m.OverFlowToolbarToggleButtom
+                        sap.m.MenuButton
+                            sap.m.button
+                    sap.m.Column
+                        sap.m.Text
+                    sap.m.ColumnListItem (type navigation)
+                        sap.m.Text
+                        sap.ui.layout.HorizontalLayout
+                        ...
+                    
+
+
+
+            

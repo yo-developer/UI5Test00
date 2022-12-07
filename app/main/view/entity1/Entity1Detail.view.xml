@@ -1,0 +1,42 @@
+<mvc:View
+    controllerName="yo.test.controller.entity1.Entity1Detail"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false"
+        busy="{entity1DetailView>/busy}"
+        busyIndicatorDelay="0">
+        <semantic:titleHeading>
+            <Title
+                text="{i18n>entity1DetailTitle}"
+                level="H2"/>
+            <OverflowToolbar>
+                
+            </OverflowToolbar>
+        </semantic:titleHeading>
+        <semantic:content>
+            <f:SimpleForm id="SimpleFormDisplay"
+                editable="false" >
+                <f:content>
+                    <Label text="Title" />
+                    <Text id="title" text="{entity>title}" />
+                    <Label text="Description" />
+                    <Text id="descr" text="{entity>descr}" />
+                    <Label text="Title" />
+                    <Input id="titleInput" value="{entity1DetailView>/entity1/title}" />
+                    <Label text="Description" />
+                    <Input id="descrInput" value="{entity1DetailView>/entity1/descr}" />
+
+                    <Button icon="sap-icon://save" id="saveSalesOrders"
+						press="onSave" tooltip="Save sales orders"/>
+
+                </f:content>
+            </f:SimpleForm>
+        </semantic:content>
+    </semantic:SemanticPage>
+</mvc:View>

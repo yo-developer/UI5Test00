@@ -1,15 +1,15 @@
 {
-	"defaultKey": "item1",
+	"defaultKey": "home",
 	"items": [
 		{
 			"titleI18nKey": "appMenuItem1",
 			"icon": "sap-icon://home",
-			"key": "item1"
+			"key": "home"
 		},
 		{
 			"titleI18nKey": "appMenuItem2",
 			"icon": "sap-icon://settings",
-			"key": "item2"
+			"key": "entity1"
 		},
 		{
 			"titleI18nKey": "appMenuItem3",

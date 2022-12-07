@@ -2,5 +2,5 @@
     controllerName="yo.test.controller.Home"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
-    <Text text="Hello World"/>
+    <Text text="Hello World from Home view"/>
 </mvc:View>

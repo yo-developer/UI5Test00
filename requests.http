@@ -1,0 +1,10 @@
+###
+#
+GET http://localhost:4004/service/entity/Entity1(ID=20466921-7d57-4e76-b14c-e53fd97dcb11,IsActiveEntity=true)
+
+###
+#
+PATCH http://localhost:4004/service/entity/Entity1(ID=20466921-7d57-4e76-b14c-e53fd97dcb11,IsActiveEntity=true)
+Content-Type:application/json;charset=UTF-8;IEEE754Compatible=true
+
+{"descr":"Description 12"}

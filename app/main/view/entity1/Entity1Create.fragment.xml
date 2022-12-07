@@ -1,0 +1,23 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <Dialog title="TITLE">
+        <content>
+            <f:SimpleForm>
+                <f:content>
+                    <Label text="Title" />
+                    <Input value="{local>/entity1/title}" />
+                    <Label text="Description" />
+                    <Input value="{local>/entity1/descr}" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <beginButton>
+            <Button text="CANCEL" press="onPressCreateDialogCancelButton" />
+        </beginButton>
+        <endButton>
+            <Button text="SAVE" press="onPressCreateDialogSaveButton" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

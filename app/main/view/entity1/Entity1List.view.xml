@@ -1,0 +1,83 @@
+<mvc:View
+    controllerName="yo.test.controller.entity1.Entity1List"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false">
+
+        <semantic:titleHeading>
+            <Title
+                text="{i18n>entity1ListTitle}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:content>
+            <Table
+                id="table"
+                width="auto"
+                items="{
+                    path: 'entity>/Entity1',
+                    sorter: {
+                        path: 'ID',
+                        descending: false
+                    }
+                }"
+                noDataText="{in18n>entity1ListNoData}"
+                busyIndicatorDelay="{in18n>entity1ListBusy}"
+                growing="true"
+                growingScrollToLoad="true"
+                updateFinished=".onUpdateFinished">
+
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title
+                            id="tableHeader"
+                            text="OverflowToolbar-Title"
+                            level="H3"/>
+                        <ToolbarSpacer />
+                        <SearchField
+                            id="searchField"
+                            tooltip="OverflowToolbar-SearchField-tooltip"
+                            search=".onSearch">
+                            <layoutData>
+                                <OverflowToolbarLayoutData
+                                    maxWidth="200px"
+                                    priority="NeverOverflow"/>
+                            </layoutData>
+                        </SearchField>
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="TitleColumn">
+                        <Text text="Title" id="TitleColumnTitle"/>
+                    </Column>
+                    <Column id="DescriptionColumn">
+                        <Text text="Description" id="DescriptionColumnTitle"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem
+                        type="Navigation"
+                        press=".onPress">
+                        <cells>
+
+                            <ObjectIdentifier
+                                text="{entity>title}" />
+                            <Text
+                                text="{entity>descr}" />
+
+                        </cells>
+                    </ColumnListItem>
+                </items>
+
+            </Table>
+
+        </semantic:content>
+    </semantic:SemanticPage>
+</mvc:View>

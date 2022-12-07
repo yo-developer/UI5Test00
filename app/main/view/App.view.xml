@@ -5,8 +5,7 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:tnt="sap.tnt">
     <tnt:ToolPage
-        id="app"
-        class="sapUiDemoToolPage">
+        id="app">
         <tnt:header>
             <tnt:ToolHeader>
                 <Title
