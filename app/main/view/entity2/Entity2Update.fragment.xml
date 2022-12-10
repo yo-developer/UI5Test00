@@ -1,0 +1,25 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm>
+            <f:content>
+                <Label text="Title" required="true"/>
+                <Input value="{local>/entity2/title}" showClearIcon="true"/>
+                <Label text="Description" />
+                <Input value="{local>/entity2/descr}" />
+                <Label text="Entity 1" />
+                <Input
+                    showValueHelp="true"
+                    valueHelpOnly="true"
+                    valueHelpRequest="onEntity1ValueHelpRequest"
+                    value="{local>/associations/entity1/title}" />
+                <Text text="{entity>entity1/title}" /> 
+                <Input
+                    value="{local>/entity2/entity1_ID}"
+                    visible="true" />
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

@@ -1,0 +1,20 @@
+<core:FragmentDefinition 
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.ui.layout.form">
+    <VBox class="sapUiSmallMargin">
+        <f:SimpleForm>
+            <f:content>
+                <Label text="Title" />
+                <Text text="{local>/entity2/title}" />
+                <Text text="{entity>title}" /> 
+                <Label text="Description" />
+                <Text text="{local>/entity2/descr}" />
+                <Text text="{entity>descr}" />    
+                <Label text="Entity 1" />
+                <Text text="{local>/entity2/entity1/title}" />
+                <Text text="{entity>entity1/title}" />        
+            </f:content>
+        </f:SimpleForm>
+    </VBox>
+</core:FragmentDefinition>

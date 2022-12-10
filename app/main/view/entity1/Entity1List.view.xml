@@ -1,83 +1,79 @@
 <mvc:View
     controllerName="yo.test.controller.entity1.Entity1List"
-    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml" 
+    xmlns="sap.m" 
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns:semantic="sap.f.semantic">
-
-    <semantic:SemanticPage
-        id="page"
-        headerPinnable="false"
-        toggleHeaderOnTitleClick="false">
-
-        <semantic:titleHeading>
-            <Title
-                text="{i18n>entity1ListTitle}"
-                level="H2"/>
-        </semantic:titleHeading>
-
-        <semantic:content>
-            <Table
-                id="table"
-                width="auto"
-                items="{
-                    path: 'entity>/Entity1',
-                    sorter: {
-                        path: 'ID',
-                        descending: false
-                    }
-                }"
-                noDataText="{in18n>entity1ListNoData}"
-                busyIndicatorDelay="{in18n>entity1ListBusy}"
-                growing="true"
-                growingScrollToLoad="true"
-                updateFinished=".onUpdateFinished">
-
-                <headerToolbar>
-                    <OverflowToolbar>
-                        <Title
-                            id="tableHeader"
-                            text="OverflowToolbar-Title"
-                            level="H3"/>
-                        <ToolbarSpacer />
-                        <SearchField
-                            id="searchField"
-                            tooltip="OverflowToolbar-SearchField-tooltip"
-                            search=".onSearch">
-                            <layoutData>
-                                <OverflowToolbarLayoutData
-                                    maxWidth="200px"
-                                    priority="NeverOverflow"/>
-                            </layoutData>
-                        </SearchField>
-                    </OverflowToolbar>
-                </headerToolbar>
-
-                <columns>
-                    <Column id="TitleColumn">
-                        <Text text="Title" id="TitleColumnTitle"/>
-                    </Column>
-                    <Column id="DescriptionColumn">
-                        <Text text="Description" id="DescriptionColumnTitle"/>
-                    </Column>
-                </columns>
-
-                <items>
-                    <ColumnListItem
-                        type="Navigation"
-                        press=".onPress">
-                        <cells>
-
-                            <ObjectIdentifier
-                                text="{entity>title}" />
-                            <Text
-                                text="{entity>descr}" />
-
-                        </cells>
-                    </ColumnListItem>
-                </items>
-
-            </Table>
-
-        </semantic:content>
-    </semantic:SemanticPage>
+    xmlns:uxap="sap.uxap"
+    xmlns:layout="sap.ui.layout">
+    <uxap:ObjectPageLayout>
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+                <uxap:heading>
+                    <Title
+                    text="{i18n>entity1ListTitle}"
+                    level="H2"/>
+                </uxap:heading>
+                <uxap:actions>
+                    <Button 
+                    text="Create" 
+                    press="onPressCreateButton"/>
+                </uxap:actions>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+        <uxap:headerContent>
+            <layout:VerticalLayout>
+                <Label>
+                </Label>
+                <SearchField
+                    id="allSearchField"
+                    search="onSearchAllSearchField"/>
+            </layout:VerticalLayout>
+        </uxap:headerContent>
+        <uxap:sections>
+            <uxap:ObjectPageSection
+                showTitle="false">
+                <uxap:ObjectPageSubSection>
+                    <Table
+                        id="table"
+                        width="auto"
+                        items="{
+                            path: 'entity>/Entity1',
+                            sorter: {
+                                path: 'ID',
+                                descending: false
+                            }
+                        }"
+                        busy="{local>/busy}"
+                        noDataText="{in18n>entity1ListNoData}">
+                        <columns>
+                            <Column>
+                                <Text text="Title"/>
+                            </Column>
+                            <Column>
+                                <Text text="Description"/>
+                            </Column>
+                            <Column>
+                                <Text text="Actions"/>
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem
+                                type="Navigation"
+                                press="onPressColumnListItem">
+                                <cells>
+                                    <ObjectIdentifier
+                                        text="{entity>title}" />
+                                    <Text
+                                        text="{entity>descr}" />
+                                    <Button 
+                                        text="Delete" 
+                                        press="onPressDeleteButton"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </uxap:ObjectPageSubSection>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
 </mvc:View>

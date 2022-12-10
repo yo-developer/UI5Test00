@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="yo.test.controller.entity1.Entity1List"
+    controllerName="yo.test.controller.entity2.Entity2List"
     xmlns:html="http://www.w3.org/1999/xhtml" 
     xmlns="sap.m" 
     xmlns:mvc="sap.ui.core.mvc"
@@ -10,7 +10,7 @@
             <uxap:ObjectPageDynamicHeaderTitle>
                 <uxap:heading>
                     <Title
-                    text="{i18n>entity1ListTitle}"
+                    text="{i18n>entity2ListTitle}"
                     level="H2"/>
                 </uxap:heading>
                 <uxap:actions>
@@ -37,20 +37,26 @@
                         id="table"
                         width="auto"
                         items="{
-                            path: 'entity>/Entity1',
+                            path: 'entity>/Entity2',
+                            parameters: {
+                                expand: 'entity1'
+                            },
                             sorter: {
                                 path: 'ID',
                                 descending: false
                             }
                         }"
                         busy="{local>/busy}"
-                        noDataText="{in18n>entity1ListNoData}">
+                        noDataText="{in28n>entity2ListNoData}">
                         <columns>
                             <Column>
                                 <Text text="Title"/>
                             </Column>
                             <Column>
                                 <Text text="Description"/>
+                            </Column>
+                            <Column>
+                                <Text text="Entity1"/>
                             </Column>
                             <Column>
                                 <Text text="Actions"/>
@@ -65,6 +71,8 @@
                                         text="{entity>title}" />
                                     <Text
                                         text="{entity>descr}" />
+                                    <Text
+                                        text="{entity>entity1/title}" />
                                     <Button 
                                         text="Delete" 
                                         press="onPressDeleteButton"/>

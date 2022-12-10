@@ -116,6 +116,16 @@
           "name": "Entity1Detail",
           "pattern": "entity1/{ID}",
           "target": "TargetEntity1Detail"
+        },
+        {
+          "name": "Entity2List",
+          "pattern": "entity2",
+          "target": "TargetEntity2List"
+        },
+        {
+          "name": "Entity2Detail",
+          "pattern": "entity2/{ID}",
+          "target": "TargetEntity2Detail"
         }
       ],
       "targets": {
@@ -126,13 +136,23 @@
         },
         "TargetEntity1List": {
           "viewType": "XML",
-          "viewId": "Entity1ListB",
-          "viewName": "entity1.Entity1ListB"
+          "viewId": "Entity1List",
+          "viewName": "entity1.Entity1List"
         },
         "TargetEntity1Detail": {
           "viewType": "XML",
           "viewId": "Entity1Detail",
-          "viewName": "entity1.Entity1DetailB"
+          "viewName": "entity1.Entity1Detail"
+        },
+        "TargetEntity2List": {
+          "viewType": "XML",
+          "viewId": "Entity2List",
+          "viewName": "entity2.Entity2List"
+        },
+        "TargetEntity2Detail": {
+          "viewType": "XML",
+          "viewId": "Entity2Detail",
+          "viewName": "entity2.Entity2Detail"
         }
       }
     },

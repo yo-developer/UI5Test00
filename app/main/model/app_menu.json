@@ -14,7 +14,7 @@
 		{
 			"titleI18nKey": "appMenuItem3",
 			"icon": "sap-icon://line-chart",
-			"key": "item3"
+			"key": "entity2"
 		}
 	]
 }

@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="yo.test.controller.entity1.Entity1Detail"
+    controllerName="yo.test.controller.entity2.Entity2Detail"
     xmlns:html="http://www.w3.org/1999/xhtml" 
     xmlns="sap.m" 
     xmlns:core="sap.ui.core"
@@ -51,7 +51,7 @@
                     id="fragmentSubSection">
 <!--
                     <core:Fragment
-                        fragmentName="yo.test.view.entity1.Entity1Update"
+                        fragmentName="yo.test.view.entity2.Entity2Update"
                         type="XML" />
 -->
                 </uxap:ObjectPageSubSection>
