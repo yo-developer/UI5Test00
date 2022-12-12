@@ -49,11 +49,6 @@
                 showTitle="false">
                 <uxap:ObjectPageSubSection
                     id="fragmentSubSection">
-<!--
-                    <core:Fragment
-                        fragmentName="yo.test.view.entity2.Entity2Update"
-                        type="XML" />
--->
                 </uxap:ObjectPageSubSection>
             </uxap:ObjectPageSection>
         </uxap:sections>

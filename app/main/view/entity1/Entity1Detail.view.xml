@@ -46,18 +46,13 @@
         </uxap:headerContent>
         <uxap:sections>
             <uxap:ObjectPageSection
-                showTitle="false">
+                title="hola">
                 <uxap:ObjectPageSubSection
                     id="fragmentSubSection">
-<!--
-                    <core:Fragment
-                        fragmentName="yo.test.view.entity1.Entity1Update"
-                        type="XML" />
--->
                 </uxap:ObjectPageSubSection>
-                <uxap:ObjectPageSubSection>
-
-                </uxap:ObjectPageSubSection>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection
+                title="adios">
                 <uxap:ObjectPageSubSection>
                     <Table
                         width="auto"
