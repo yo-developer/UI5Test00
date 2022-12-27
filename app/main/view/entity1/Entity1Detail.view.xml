@@ -8,6 +8,7 @@
     xmlns:layout="sap.ui.layout"
     xmlns:tnt = "sap.tnt">
     <uxap:ObjectPageLayout
+        showTitleInHeaderContent="true"
         busy="local>/busy">
         <uxap:headerTitle>
             <uxap:ObjectPageDynamicHeaderTitle>
@@ -22,20 +23,20 @@
                         text="EDIT" 
                         visible="false"
                         press="onPressEditButton"/>
-                </uxap:actions>
-                <uxap:actions>
                     <Button
                         id="saveButton"
                         text="SAVE"
                         visible="false"
                         press="onPressSaveButton"/>
-                </uxap:actions>
-                <uxap:actions>
                     <Button
                         id="cancelButton"
                         text="CANCEL"
                         visible="false"
                         press="onPressCancelButton"/>
+                    <Button
+                        id="back-button"
+                        icon="sap-icon://nav-back"
+                        press="onPressBackButton"/>
                 </uxap:actions>
             </uxap:ObjectPageDynamicHeaderTitle>
         </uxap:headerTitle>

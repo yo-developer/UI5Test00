@@ -56,6 +56,10 @@ sap.ui.define(
                 this._setDisplayMode();
             },
 
+            onPressBackButton: function (oEvent) {
+                this.onNavBack();
+            },
+
             _setUpdateMode: function () {
                 let that = this;
                 this._setFragment(
